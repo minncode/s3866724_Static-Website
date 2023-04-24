@@ -1,0 +1,298 @@
+/*RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Kim minsung
+ID: s3866724
+Acknowledgement: https://rmit.instructure.com/courses/118544/pages/w3-lecture?module_item_id=4924759
+https://rmit.instructure.com/courses/118544/pages/w4-lecture?module_item_id=4924781
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_inline-block.asp
+https://www.w3schools.com/css/css_navbar.asp*/
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Custom;
+  src: url(Neucha/Neucha-Regular.ttf);
+}
+
+body {
+  font-family: Custom;
+}
+
+header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .logo-con{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 300px;
+    height: auto;
+    margin: 0 0 0 50px;
+  }
+
+  @media screen and (max-width: 960px) {
+      .logo img {
+          width: 200px;
+      }
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 16px;
+    background-color: aliceblue;
+  }
+
+  @media screen and (max-width: 960px) {
+      .search-bar {
+          width: 200px;
+      }
+  }
+
+  .search-button {
+    padding: 12px;
+    background-color: aliceblue;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .search-button img {
+    width: 20px;
+  }
+  
+
+  ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    ul.navbar li {
+      float: left;
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover:not(.home) {background-color: green;}
+    
+    ul.navbar li a.home {background-color: orange;}
+    
+    @media screen and (max-width: 960px) {
+      ul.navbar li {float: none;}
+    }
+
+    /* Style for main content area */
+    .main {
+      padding: 20px;
+    }
+
+    /* Breadcrumb styles */
+    .breadcrumb {
+      margin-bottom: 20px;
+    }
+    .breadcrumb a {
+      color: #333;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Book image styles */
+    .book-images {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .book-large-image {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 10px;
+      display: flex;
+      justify-content: end;
+    }
+
+    .book-small-images {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 50%;
+    }
+    .book-small-image img {
+      width: 100px;
+      padding: 10px;
+    }
+
+    .book-small-image:hover img {
+      transform: scale(3);
+    }
+
+    .information {
+        flex-wrap: wrap;
+        width: 300px;
+    }
+
+    /* Book price and add to cart button styles */
+    .book-price {
+      font-size: 24px;
+      margin-bottom: 50px;
+      margin-left: 7px;
+    }
+
+    .book-price del {
+      color: red;
+    }
+
+    .add-to-cart {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Book name and description styles */
+    .book-name {
+      font-size: 24px;
+      font-weight: bold;
+      width: 64%;
+      margin: 0 auto 30px;
+    }
+    
+    .book-description {
+      font-size: 16px;
+      width: 80%;
+      margin: 0 auto 50px;
+      text-align: justify;
+    }
+
+    /* Responsive styles for mobile devices */
+    @media screen and (max-width: 960px) {
+      .book-images {
+        flex-direction: column;
+        align-items: center;
+      }
+      .book-large-image {
+        max-width: 100%;
+      }
+      .book-small-images {
+        flex-direction: row;
+      }
+      .book-small-image {
+        max-width: 33%;
+      }
+      .book-price {
+        text-align: center;
+      }
+      .add-to-cart {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      .book-name {
+        text-align: center;
+      }
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .logo-container {
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  
+    .logo-container img{
+      width: 300px;
+      height: auto;
+      margin: 0 0 0 20px;
+    }
+    
+    ul.info {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    ul.info li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    ul.info li a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+      margin-top: 10px;
+    }
+    
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    
+    p {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+    
+    .footer-bottom {
+      background-color: #333;
+      padding: 5px;
+      text-align: center;
+    }
+  
+    .footer-bottom p{
+      color: white;
+      margin-bottom: 5px;
+    }
