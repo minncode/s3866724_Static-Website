@@ -1,0 +1,293 @@
+/*RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Kim minsung
+ID: s3866724
+Acknowledgement: https://rmit.instructure.com/courses/118544/pages/w3-lecture?module_item_id=4924759
+https://rmit.instructure.com/courses/118544/pages/w4-lecture?module_item_id=4924781
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_inline-block.asp
+https://www.w3schools.com/css/css_navbar.asp*/
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Custom;
+  src: url(Neucha/Neucha-Regular.ttf);
+}
+
+body {
+  font-family: Custom;
+}
+
+header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .logo-con{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 300px;
+    height: auto;
+    margin: 0 0 0 50px;
+  }
+
+  @media screen and (max-width: 960px) {
+      .logo img {
+          width: 200px;
+      }
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 16px;
+    background-color: aliceblue;
+  }
+
+  @media screen and (max-width: 960px) {
+      .search-bar {
+          width: 200px;
+      }
+  }
+
+  .search-button {
+    padding: 12px;
+    background-color: aliceblue;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .search-button img {
+    width: 20px;
+  }
+  
+
+  ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    ul.navbar li {
+      float: left;
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover:not(.home) {background-color: green;}
+    
+    ul.navbar li a.home {background-color: orange;}
+    
+    @media screen and (max-width: 960px) {
+      ul.navbar li {float: none;}
+    }
+
+  
+  /* Main Styles */
+  main {
+    padding: 20px;
+  }
+  
+  .category1 h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      margin-left: 39%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+    }
+  
+    .category2 h2{
+      margin-bottom: 20px;
+      text-align: center;
+      margin-left: 45%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+    }
+  
+    .category3 h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      margin-left: 39%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+    }
+  
+  .category1, .category2, .category3 {
+      margin-top: 50px;
+      margin-bottom: 40px;
+      display: -webkit-flex;
+      -webkit-box-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+  }
+  
+  .more {
+      margin-left: auto;
+      flex-shrink: 0;
+      display: -webkit-flex;
+      -webkit-box-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+  }
+  
+  .books {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .books li {
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    list-style: none;
+  }
+  
+  .books li img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .books li h3 {
+    margin: 20px 0 10px;
+  }
+  
+  .books li p1 {
+      font-size: 14px;
+      color: red;
+      margin: 10px 0 10px;
+    }
+  
+  .books li p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 10px;
+  }
+  
+  .books li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .video {
+    margin-bottom: 100px;
+  }
+  
+  .video h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .video iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+  }
+  
+    /* Footer Styles */
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .logo-container {
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  
+    .logo-container img{
+      width: 300px;
+      height: auto;
+      margin: 0 0 0 20px;
+    }
+    
+    ul.info {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    ul.info li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    ul.info li a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+      margin-top: 10px;
+    }
+    
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    
+    p {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+    
+    .footer-bottom {
+      background-color: #333;
+      padding: 5px;
+      text-align: center;
+    }
+  
+    .footer-bottom p{
+      color: white;
+      margin-bottom: 5px;
+    }
