@@ -1,0 +1,329 @@
+/*RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Kim minsung
+ID: s3866724
+Acknowledgement: https://rmit.instructure.com/courses/118544/pages/w3-lecture?module_item_id=4924759
+https://rmit.instructure.com/courses/118544/pages/w4-lecture?module_item_id=4924781
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_margin.asp
+https://www.w3schools.com/css/css_inline-block.asp
+https://www.w3schools.com/css/css_navbar.asp*/
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Custom;
+  src: url(Neucha/Neucha-Regular.ttf);
+}
+
+body {
+  font-family: Custom;
+}
+
+header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .logo-con{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 300px;
+    height: auto;
+    margin: 0 0 0 50px;
+  }
+
+  @media screen and (max-width: 960px) {
+      .logo img {
+          width: 200px;
+      }
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 16px;
+    background-color: aliceblue;
+  }
+
+  @media screen and (max-width: 960px) {
+      .search-bar {
+          width: 200px;
+      }
+  }
+
+  /* Breadcrumb styles */
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+
+.breadcrumb ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.breadcrumb li::after {
+  content: " > ";
+  color: #999;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+  .search-button {
+    padding: 12px;
+    background-color: aliceblue;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .search-button img {
+    width: 20px;
+  }
+  
+
+  ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    ul.navbar li {
+      float: left;
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover:not(.home) {background-color: green;}
+    
+    ul.navbar li a.home {background-color: orange;}
+    
+    @media screen and (max-width: 960px) {
+      ul.navbar li {float: none;}
+    }
+
+    
+    
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Contact form styles */
+
+.contact-form1-container {
+  margin: 40px 100px;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.contact-form1 input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.contact-form1 label {
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* Contact form input and textarea styles */
+.contact-form1 input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Contact form checkbox and radio button styles */
+.contact-form1 input[type="checkbox"],
+.contact-form1 input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  margin-right:10px;
+}
+
+/* Contact form button container styles */
+.button-container {
+  margin: 20px 0 0 100px;
+  }
+  
+  /* Submit and reset button styles */
+  .submit-button,
+  .reset-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  }
+  
+  /* Submit button hover effect */
+  .submit-button:hover {
+  background-color: #0056b3;
+  }
+  
+  /* Reset button hover effect */
+  .reset-button:hover {
+  background-color: #6c757d;
+  }
+  
+  @media (min-width: 960px) {
+  .form-group {
+  display: flex;
+  align-items: center;
+  }
+  label {
+      flex-basis: 20%;
+      margin-right: 10px;
+      text-align: right;
+  }
+  
+  input, select, textarea {
+      flex-basis: 80%;
+  }
+} 
+
+    /* Footer Styles */
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .logo-container {
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  
+    .logo-container img{
+      width: 300px;
+      height: auto;
+      margin: 0 0 0 20px;
+    }
+    
+    ul.info {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    ul.info li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    ul.info li a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .social-icons {
+      margin-top: 10px;
+    }
+    
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    
+    p {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+    
+    .footer-bottom {
+      background-color: #333;
+      padding: 5px;
+      text-align: center;
+    }
+  
+    .footer-bottom p{
+      color: white;
+      margin-bottom: 5px;
+    }
